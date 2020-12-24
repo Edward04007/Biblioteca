@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Index</title>
+    <link rel='stylesheet' type='text/css' media='screen' th:href="@{/unico.css}">
+    <script src="https://kit.fontawesome.com/8544c965ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="fas fa-home" href="/"></a></li>
+            <li><a class="fas fa-book-open" href="/read"></a></li>
+        </ul>
+    </nav>
+    <section>
+        <form method="POST" action="/">
+            <legend>Cadastro</legend>
+            <input type="text" name="titulo" placeholder="Tilulo">
+            <input type="number" name="volume" placeholder="Volume">
+            <input type="text" name="autor" placeholder="Autor">
+            <input type="text" name="editora" placeholder="Editora">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>

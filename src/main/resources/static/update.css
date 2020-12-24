@@ -1,0 +1,43 @@
+*{
+    padding: 0px;
+    background-color: rgb(37, 37, 37);
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    outline: none;
+    color: white;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+/* Estilo para o formulário */
+form{
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form legend{
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+form input{
+    width: 50%;
+    height: 2rem;
+    margin-bottom: 0.5em;
+    border-radius: 0.8em;
+    padding-left: 0.3em;
+    border: solid 1px white;
+    font-size: 1rem;
+}
+form button{
+    width: 4rem;
+    border-radius: 2em;
+    font-size: 1rem;
+    padding-left: 0.2em;
+    border: solid 1px white;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Index</title>
+    <link rel='stylesheet' type='text/css' media='screen' th:href="@{/unico.css}">
+    <script src="https://kit.fontawesome.com/8544c965ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="fas fa-home" href="/"></a></li>
+            <li><a class="fas fa-book-open" href="/read"></a></li>
+        </ul>
+    </nav>
+    <section class="conso">
+        <legend class="legen">Lista</legend>
+        <div class="consulta" th:each="bibli : ${bibi}">
+            <div class="consulta-tex">
+                <div>
+                    <p>Titulo:</p>
+                    <p>Volume:</p>
+                    <p>Autor:</p>
+                    <p>Editora:</p>
+                </div>
+                <div>
+                    <p th:text="${bibli.titulo}">Titulo</p>
+                    <p th:text="${bibli.volume}">Volume</p>
+                    <p th:text="${bibli.autor}">Autor</p>
+                    <p th:text="${bibli.editora}">Editora</p>
+                </div>
+            </div>
+           <div class="div-links">
+                <a th:href="@{/delete/{id}(id=${bibli.id})}">APAGAR</a>
+                <a th:href="@{/update/{id}(id=${bibli.id})}">Atualizar</a>
+            </div> 
+         </div> 
+    </section>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar</title>
+    <link rel='stylesheet' type='text/css' media='screen' th:href="@{/update.css}">
+</head>
+<body>
+    <form th:object="${edit}" method="POST" action="/">
+        <label>Identificação:</label>
+        <input type="number" th:field="*{id}" readonly="readonly">
+
+        <label>Titulo:</label>
+        <input type="text" th:field="*{titulo}">
+
+        <label>Volume:</label>
+        <input type="number" th:field="*{volume}">
+
+        <label>Autor:</label>
+        <input type="text" th:field="*{autor}">
+
+        <label>Editora:</label>
+        <input type="text" th:field="*{editora}">
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
